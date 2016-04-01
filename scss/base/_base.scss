@@ -1,24 +1,43 @@
-* { 
-  box-sizing: border-box;
-}
-  
 body {
-  margin: 0;
-  padding: 0;
-  font-family: $stack-Roboto;
-  color: #222;
-  background: #f7f5f0;
-  @extend %centered;
+	background-color: $background-color;
+	font-family: $font-fira;
+	font-size: $body-font-size;
+	display: flex;
+	flex-direction: column;
 }
-
 a {
-  text-decoration: none;
-  color: $color-link;
-}
-a:hover {
-  color: $color-link-hover;
+	color: $link-color;
+	text-transform: uppercase;
+	font-size: $link-size;
+	text-decoration: none;
+	&:hover {
+		color: $link-color-hover;
+	}
 }
 
-.clearfix {
-  clear: both;
+h1 {
+	font-size: $h1-size;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: $h2-size;
+}
+
+h3 {
+	font-size: $h3-size;
+}
+
+/* ================================= 
+  Clearfix
+==================================== */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
 }

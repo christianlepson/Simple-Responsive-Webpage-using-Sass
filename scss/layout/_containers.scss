@@ -1,49 +1,55 @@
-.card {
-  margin: 30px;
-  padding: 20px 40px 40px;
-  max-width: 500px;
-  text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #ccc;
-  border-radius: 6px;
-  transition: all .5s;
-}
-.card:hover {
-  border-color: $color-border-hover;
+.about-me {
+	@extend %centered;
+	color: #7f7f7f;
+	width: 90%;
+	padding-bottom: 50px;
 }
 
-.flex {
-	@include tablet {
-	  display: -ms-flexbox;      /* TWEENER - IE 10 */
-	  display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+.main-content {
+	@extend %centered;
+	margin-bottom: 50px;
+	background-color: $content-background-color;
+	width: 100%;
+	@include desktop {
+		width: 90%;
 	}
 }
 
-.main {
-  @include tablet {
-    padding-top: 20px;
-    p {line-height: 1.6em;}
-  }
+.col {
+	@extend %centered;
+	padding-bottom: 60px;
+	width: 90%;
+	@include tablet {
+		flex: 1 40%;
+		margin: 0 30px;
+	}
+	@include desktop {
+		flex: 1 25%;
+		margin: 0 15px;
+	}
 }
 
-ul.skills {
-  padding: 0;
-  text-align: center;
+.cols {
+	@include tablet {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }
 
-.skills li {
-  border-radius: 6px;
-  display: inline-block;
-  background: #ff9904;
-  color: white;
-  padding: 5px 10px;
-  margin: 2px;
-}
-
-.skills li:nth-child(odd) {
-  background: #0399ff;
+.contact {
+	@extend %centered;
+	padding: 50px 0;
+	width: 90%;
+	color: $secondary-text-color;
+	p {
+		font-size: 1.2em;
+	}
+	a {
+		padding-left: 10px;
+		color: $secondary-text-color;
+		text-decoration: none;
+		font-weight: bold;
+	}
 }

@@ -1,55 +1,123 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Christian Lepson's Profile</title>
+  <title>Responsive Website Using Sass</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
-  <body>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="scripts/picturefill.js" async></script>
+</head>
 
-    <div class="main-nav">
-        <ul class="nav">
-          <li class="name">Christian Lepson</li>
-          <li><a href="#">Home</a></li>
-        </ul>
-    </div>
+<body>
+<div class="wrapper">
+	<header id="top" class="main-header">
+		<h1>Christian Lepson</h1>
+		<nav class="main-nav">
+			<ul class="header-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="about-me cf">
+		<img
+		class="profile-photo"
+		srcset="
+				img/responsive-layout-profile-large.png   800w,
+				img/responsive-layout-profile-medium.png  500w,
+				img/responsive-layout-profile.png         450w"
+		sizes=" (min-width: 1024px) 500px,
+				(min-width: 768px)  300px,
+				450px"
+		src="img/responsive-layout-profile-medium.png"
+		alt="Profile Picture"
+		/>
+		<p>
+			Hi! I'm a front-end developer who loves responsive design and css.
+			I recently finished a degree in front-end web development at Treehouse
+			and am excited to put all my skills to use!
+		</p>
+	</div><!-- about me -->
+	<div class="main-content">
+		<h2 id="portfolio-title">Portfolio</h2>
+		<div class="cols">
+			<div class="first col">
+				<img class="portfolio-img" src="img/portfolio-1.png" alt=""/>
+				<h3>Marketing Page</h3>
+				<p>
+					This project shows the front page of a marketing website meant for a specific business I'm interested in.
+				</p>
+			</div><!-- first col -->
 
-    <header>
-      <img src="images/me.jpg" alt="Photo of Christian Lepson" class="profile-image">
-      <h1 class="tag name">Hello, I’m Christian.</h1>
-      <p class="tag location">My home is Baltimore, Maryland.</p>
-    </header>
+			<div class="second col">
+				<img class="portfolio-img" src="img/portfolio-2.png" alt=""/>
+				<h3>Search Page</h3>
+				<p>
+					This project searches through a specific database to find information that the user is trying to look up.
+				</p>
+			</div><!-- second col -->
 
-    <main class="flex">
-      <div class="card">
-        <h2>Background</h2>
-        <p>I am a Computer Science student currently attending University of Maryland, University College. My main interests are digital media, web technology, and mobile development.</p>
-        <p>I’ve been a professional cook and gardener and am a life-long learner who's always interested in expanding my skills.</p>
-      </div> 
+			<div class="third col">
+				<img class="portfolio-img" src="img/portfolio-3.png" alt=""/>
+				<h3>Travel App</h3>
+				<p>
+					This project compares travel times based on different transportation methods and tells you the best time.
+				</p>
+			</div><!-- third col -->
 
-      <div class="card">
-        <h2>Goals</h2>
-        <p>I want to continue to learn web development technology and utilize my current skills in:</p>
-        <ul class="skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Adobe Illustrator</li>
-          <li>Adobe Photoshop</li>
-          <li>Java</li>
-        </ul>
-        <p>I’d like to obtain an internship or entry-level position in the web development field in the near future.</p>
-      </div> 
+			<div class="fourth col">
+				<img class="portfolio-img" src="img/portfolio-6.png" alt=""/>
+				<h3>Map of Favorite Spots</h3>
+				<p>
+					This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.
+				</p>
+			</div><!-- fourth col -->
 
-    </main>
-    <footer>
-      <ul>
-        <li><a href="https://twitter.com/christianlepson" class="social twitter">Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/christianlepson" class="social linkedin">LinkedIn</a></li>
-        <li><a href="https://github.com/christianlepson" class="social github">Github</a></li>
-      </ul>
-      <p class="copyright">Copyright 2015, Christian Lepson</p>
-    </footer>
-  </body>
-  </html>
+			<div class="fifth col">
+				<img class="portfolio-img" src="img/portfolio-5.png" alt=""/>
+				<h3>Photo Gallery</h3>
+				<p>
+					This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.
+				</p>
+			</div><!-- fifth col -->
+
+			<div class="sixth col">
+				<img class="portfolio-img" src="img/portfolio-4.png" alt=""/>
+				<h3>Calculator</h3>
+				<p>
+					Someone can enter in the numbers they want, press the big blue button and get the result.
+				</p>
+			</div><!-- sixth col -->
+		</div><!-- cols -->
+	</div> <!-- main-content -->
+
+	<div class="contact">
+		<h2>Contact</h2>
+		<p>
+			If you're interested in chatting or want more information on what I've been working on, I'd love to hear from you!
+		</p>
+		<p>
+			Phone <a href="tel:1-111-555-1234">+1 (111) 555-1234</a> <br>
+			Email <a href="mailto:email@yoursite.com">email@yoursite.com</a>
+		</p>
+	</div> <!-- contact -->
+
+	<footer class="main-footer">
+		<span class="footer-name">Christian Lepson</span>
+
+		<a href="#top" class="back-to-top">Back to Top</a>
+
+		<ul class="footer-nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+
+	</footer>
+</div> <!-- wrapper -->
+</body>
+</html>

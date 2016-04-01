@@ -1,48 +1,23 @@
-footer {
-  width: 100%;
-  min-height: 30px;
-  padding: 20px 0 40px 20px;
-  @include tablet {
-    font-size: $size-font-footer-720;
-    max-width: 1200px;
-    margin: 40px auto;
-  }
+.main-footer {
+	width: 90%;
+	height: 75px;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	border-top: 2px solid #e7e7e7;
+	font-size:.75em;
 }
 
-footer .copyright {
-  top: -8px;
-  font-size: $size-copyright;
+.footer-name {
+	font-size: 2em;
+	font-weight: bold;
+	display:block;
 }
 
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer ul li {
-  display: inline-block;
-}
-
-a.social {
-  display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
-}
-a.twitter {
-  background-image: url(../images/twitter.svg);
-}
-a.linkedin {
-  background-image: url(../images/linkedin.svg);
-}
-a.github {
-  background-image: url(../images/github.svg);
-}
-a.social:hover {
-  opacity: 1;
+.back-to-top {
+	@include tablet {
+		display: none;
+	}
 }
