@@ -1,7 +1,7 @@
 .main-header {
-	text-align: center;
+	@extend %centered;
+	margin-bottom: 50px;
 	width: 90%;
-	margin: 0 auto 50px;
 	display: flex;
 	flex-direction: column;
 	@include tablet {

@@ -1,17 +1,17 @@
 .main-footer {
+	@extend %centered;
 	width: 90%;
 	height: 75px;
-	margin: 0 auto;
 	padding: 50px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items:center;
-	border-top: 2px solid #e7e7e7;
-	font-size:.75em;
+	border-top: 2px solid $footer-border-color;
+	font-size: $footer-font-size;
 }
 
 .footer-name {
-	font-size: 2em;
+	font-size: $footer-name-font-size;
 	font-weight: bold;
 	display:block;
 }

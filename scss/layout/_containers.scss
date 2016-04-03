@@ -1,6 +1,6 @@
 .about-me {
 	@extend %centered;
-	color: #7f7f7f;
+	color: $secondary-text-color;
 	width: 90%;
 	padding-bottom: 50px;
 }
@@ -8,7 +8,7 @@
 .main-content {
 	@extend %centered;
 	margin-bottom: 50px;
-	background-color: $content-background-color;
+	background-color: $secondary-background-color;
 	width: 100%;
 	@include desktop {
 		width: 90%;
@@ -44,7 +44,7 @@
 	width: 90%;
 	color: $secondary-text-color;
 	p {
-		font-size: 1.2em;
+		font-size: $contact-font-size;
 	}
 	a {
 		padding-left: 10px;
